@@ -1,0 +1,2 @@
+# FNO Model Training
+Training a Fourier Neural Operator (FNO) that maps a spatially-varying Young's-modulus field -> 2-D displacement field for a cantilever beam
