@@ -15,10 +15,12 @@ output = u(x) = (u^x, u^y)
 
 #Installing and Importing FEniCS
 
-Before generating our dataset, we need to set up FEniCS, a popular open-source library for solving partial differential equations (PDEs) using the finite element method. FEniCS provides a high-level Python interface (dolfin) that allows us to define PDEs, specify boundary conditions, and compute numerical solutions efficiently.
+Before generating our dataset, we need to set up FEniCS, a popular open-source library for solving partial differential equations (PDEs) using the finite element method. 
+FEniCS provides a high-level Python interface (dolfin) that allows us to define PDEs, specify boundary conditions, and compute numerical solutions efficiently.
 
 
-The code below first tries to import dolfin. This ensures that the rest of the notebook can run without installation errors and allows us to use FEniCS to generate PDE solution data for training our Fourier Neural Operator (FNO) model.
+The code below first tries to import dolfin. This ensures that the rest of the notebook can run without installation errors and allows us to use FEniCS to generate 
+PDE solution data for training our Fourier Neural Operator (FNO) model.
 """
 
 #Installing FEnICs
@@ -58,12 +60,9 @@ plt.ylabel('y grid')
 
 """#Generating a Random Elasticity Field 𝐸(𝑥)
 
-In this step, we generate a spatially correlated random field
-𝐸
-(
-𝑥
-)
-, which represents the material property we want to vary across the computational domain in this case, Young’s modulus. This random field will be used as part of our input data for solving the PDEs and training the FNO model. This process creates a realistic, smooth random field that will allow the PDE solver (FEniCS) to generate diverse training samples for the FNO model.
+In this step, we generate a spatially correlated random field 𝐸(𝑥), which represents the material property we want to vary across the computational domain in this case, Young’s modulus.
+This random field will be used as part of our input data for solving the PDEs and training the FNO model. This process creates a realistic, smooth random field that will allow the 
+PDE solver (FEniCS) to generate diverse training samples for the FNO model.
 """
 
 # Generate Random Field E(x) filtering white noise with an RBF kernel.
